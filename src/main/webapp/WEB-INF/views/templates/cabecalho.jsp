@@ -1,4 +1,5 @@
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
 
 <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
@@ -100,7 +101,7 @@
             <li class="mdl-menu__item mdl-list__item">
                 <span class="mdl-list__item-primary-content">
                     <i class="material-icons mdl-list__item-icon text-color--secondary">exit_to_app</i>
-                    Sair
+                    <a href="${s:mvcUrl('LC#logout').build()}">Sair</a>
                 </span>
             </li>
         </ul>

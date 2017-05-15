@@ -11,5 +11,10 @@ public class LoginController {
     public String loginForm() {
         return "loginForm";
     }
+    
+    @RequestMapping(value="/logout", method=RequestMethod.GET)
+    public String logout() {
+        return loginForm();
+    }
 
 }
