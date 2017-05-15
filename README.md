@@ -6,11 +6,13 @@ Software para gerenciar locadoras de filmes desenvolvido no Laboratório de Dese
 * [Alexandre Matos](https://github.com/mxalexandre)
 * [Igor Montenegro](https://github.com/IgorMontenegro)
 * [Isaias Tavares](https://github.com/isaiastavares)
-* [Lucas Campos﻿](https://github.com/lucas-scampos)
+* [Lucas Campos](https://github.com/lucas-scampos)
 
 # Pré-Requisitos
 
 * PostgreSQL
+
+* [Download PostgreSQL](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads#windows) 
 
 ## Obtendo o projeto
 
@@ -26,13 +28,13 @@ Software para gerenciar locadoras de filmes desenvolvido no Laboratório de Dese
 
 ## Depois de executar
 
-- Rode os inserts abaixo na respectiva ordem:
+- Execute os inserts abaixo na respectiva ordem:
 
-'insert into Role values ('ROLE_ADMIN')'
+`insert into Role values ('ROLE_ADMIN')`
 
-'insert into Usuario (email, nome, senha) values ('admin@admin.com.br', 'Administrador', '$2a$04$qP517gz1KNVEJUTCkUQCY.JzEoXzHFjLAhPQjrg5iP6Z/UmWjvUhq')'
+`insert into Usuario (email, nome, senha) values ('admin@admin.com.br', 'Administrador', '$2a$04$qP517gz1KNVEJUTCkUQCY.JzEoXzHFjLAhPQjrg5iP6Z/UmWjvUhq')`
 
-'insert into Usuario_Role(Usuario_email, roles_nome) values ('admin@admin.com.br', 'ROLE_ADMIN')'
+`insert into Usuario_Role(Usuario_email, roles_nome) values ('admin@admin.com.br', 'ROLE_ADMIN')`
 
 ## Acessando a aplicação
 
