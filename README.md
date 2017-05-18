@@ -8,11 +8,15 @@ Software para gerenciar locadoras de filmes desenvolvido no Laboratório de Dese
 * [Isaias Tavares](https://github.com/isaiastavares)
 * [Lucas Campos](https://github.com/lucas-scampos)
 
-# Pré-Requisitos
+## Tecnologias Utilizadas
 
+* Spring
+* JSP
 * PostgreSQL
 
-* [Download PostgreSQL](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads#windows) 
+# Pré-Requisitos
+
+* PostgreSQL - [Download](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads#windows) 
 
 ## Obtendo o projeto
 
@@ -20,7 +24,7 @@ Software para gerenciar locadoras de filmes desenvolvido no Laboratório de Dese
 
 ## Antes de executar
 
-- Crie um banco no PostgreSQL com o nome loca-filmes
+- Crie um banco no PostgreSQL com o nome <b>loca-filmes</b>
 
 ## Executando a aplicação
 
