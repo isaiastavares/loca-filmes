@@ -11747,7 +11747,7 @@ a {
 
 .employer-form {
   padding: 0;
-  width: 670px;
+  width: 90%;
   background-color: #4e4e4e;
   margin: 16px auto; }
   .employer-form .mdl-radio {
@@ -12086,3 +12086,7 @@ a {
 
 .mdl-textfield.is-disabled input {
   border-bottom-width: 2px !important; }
+  
+.mdl-button-right {
+	margin-left: 1140px;
+}

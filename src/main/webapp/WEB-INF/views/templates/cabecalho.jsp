@@ -5,11 +5,11 @@
     <div class="mdl-layout__header-row">
         <div class="mdl-layout-spacer"></div>
 
-        <div class="material-icons mdl-badge mdl-badge--overlap mdl-button--icon notification" id="notification"
+		<!-- Notifications dropdown-->
+        <!-- <div class="material-icons mdl-badge mdl-badge--overlap mdl-button--icon notification" id="notification"
              data-badge="23">
             notifications_none
         </div>
-        <!-- Notifications dropdown-->
         <ul class="mdl-menu mdl-list mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right mdl-shadow--2dp notifications-dropdown"
             for="notification">
             <li class="mdl-list__item">
@@ -62,7 +62,7 @@
             <li class="mdl-list__item list__item--border-top">
                 <button href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">TODAS AS NOTIFICAÇÕES</button>
             </li>
-        </ul>
+        </ul> -->
 
         <div class="avatar-dropdown" id="icon">
             <span>
