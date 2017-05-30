@@ -7,6 +7,10 @@
             <i class="material-icons" role="presentation">person</i>
             Cliente
         </a>
+        <a class="mdl-navigation__link" href="${s:mvcUrl('FC#listarFilme').build()}">
+            <i class="material-icons" role="presentation">movie</i>
+            Filme
+        </a>
         <a class="mdl-navigation__link" href="${s:mvcUrl('DC#dashboard').build()}">
             <i class="material-icons" role="presentation">dashboard</i>
             Dashboard
