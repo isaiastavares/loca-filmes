@@ -9,7 +9,7 @@
 <head>
     <c:url value="/" var="contextPath" />
 
-    <link rel="icon" type="image/png" href="${contextPath}resources/images/DB_16х16.png">
+    <link rel="icon" type="image/png" href="${contextPath}resources/images/LF_16х16.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Site para gerenciar sua Locadora de Filmes">

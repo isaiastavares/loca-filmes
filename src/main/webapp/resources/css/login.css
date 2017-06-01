@@ -1,5 +1,5 @@
 .redborder {
-    border:2px solid #f96145;
+    border:2px solid black;
     border-radius:2px;
 }
 
@@ -68,7 +68,7 @@ h2 {
 .medhidden {
     font-size: 20px;
     font-weight: bold;
-    color: #f96145;
+    color: black;
     padding: 10px;
     width:100%;
 }
