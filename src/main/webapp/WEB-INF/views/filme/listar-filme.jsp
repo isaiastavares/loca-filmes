@@ -38,7 +38,7 @@
 
                             </ul>
 
-                            <label for="type">
+                            <label class="mdl-dd-right" for="type">
                                 <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
                             </label>
                         </div>

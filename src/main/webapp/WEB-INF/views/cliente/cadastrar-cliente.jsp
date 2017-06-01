@@ -45,7 +45,7 @@
                                     <li class="mdl-menu__item">Feminino</li>
                                 </ul>
 
-                                <label for="gender">
+                                <label class="mdl-dd-right" for="gender">
                                     <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
                                 </label>
                             </div>
@@ -82,7 +82,7 @@
                                     <li class="mdl-menu__item">Residencial</li>
                                     <li class="mdl-menu__item">Comercial</li>
                                 </ul>
-                                <label for="phone_type">
+                                <label class="mdl-dd-right" for="phone_type">
                                     <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
                                 </label>
                             </div>
@@ -103,7 +103,7 @@
                                     <li class="mdl-menu__item">Pessoal</li>
                                     <li class="mdl-menu__item">Comercial</li>
                                 </ul>
-                                <label for="email_type">
+                                <label class="mdl-dd-right" for="email_type">
                                     <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
                                 </label>
                             </div>
