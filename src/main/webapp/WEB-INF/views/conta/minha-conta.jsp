@@ -120,7 +120,6 @@
                             </div> 
                         </div> 
                     </div> 
- 
                     <button id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"> 
                         Salvar 
                     </button> 
