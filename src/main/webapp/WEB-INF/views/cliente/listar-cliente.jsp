@@ -110,7 +110,7 @@
 							<a href="#">
 								<i class="material-icons">mode_edit</i>
 							</a>
-							<a href="#">
+							<a href="#" data-toggle="modal" data-target="#confirm-delete">
 								<i class="material-icons">delete</i>
 							</a>
 						</td>
@@ -124,7 +124,7 @@
 							<a href="#">
 								<i class="material-icons">mode_edit</i>
 							</a>
-							<a href="#">
+							<a href="#" data-toggle="modal" data-target="#confirm-delete">
 								<i class="material-icons">delete</i>
 							</a>
 						</td>
@@ -138,7 +138,7 @@
 							<a href="#">
 								<i class="material-icons">mode_edit</i>
 							</a>
-							<a href="#">
+							<a href="#" data-toggle="modal" data-target="#confirm-delete">
 								<i class="material-icons">delete</i>
 							</a>
 						</td>
@@ -152,7 +152,7 @@
 							<a href="#">
 								<i class="material-icons">mode_edit</i>
 							</a>
-							<a href="#">
+							<a href="#" data-toggle="modal" data-target="#confirm-delete">
 								<i class="material-icons">delete</i>
 							</a>
 						</td>

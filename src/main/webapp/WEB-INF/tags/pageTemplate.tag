@@ -38,6 +38,11 @@
     <link rel="stylesheet" href="${contextPath}resources/css/application.css">
     <!-- endinject -->
 
+    <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.1.1"
+            src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link data-require="bootstrap-css@3.1.1" data-semver="3.1.1" rel="stylesheet"
+          href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
 </head>
 <body>
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header is-small-screen">
@@ -59,5 +64,27 @@
 	<script src="${contextPath}resources/js/widgets/table/table.js"></script>
 	<script src="${contextPath}resources/js/widgets/todo/todo.js"></script>
 	<!-- endinject -->
+
+    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Atenção!</h4>
+                </div>
+
+                <div class="modal-body">
+                    <p>Você tem certeza que deseja excluir este registro?</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-danger btn-ok" data-dismiss="modal">Sim</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
