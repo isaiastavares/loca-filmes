@@ -29,16 +29,10 @@
             <li class="mdl-menu__item mdl-list__item">
                 <span class="mdl-list__item-primary-content">
                     <i class="material-icons mdl-list__item-icon">account_circle</i>
-                    Minha Conta
+                     <a href="${s:mvcUrl('AC#account').build()}">Minha Conta</a>
                 </span>
             </li>
             <li class="list__item--border-top"></li>
-            <li class="mdl-menu__item mdl-list__item">
-                <span class="mdl-list__item-primary-content">
-                    <i class="material-icons mdl-list__item-icon">settings</i>
-                    Configurações
-                </span>
-            </li>
             <li class="mdl-menu__item mdl-list__item">
                 <span class="mdl-list__item-primary-content">
                     <i class="material-icons mdl-list__item-icon text-color--secondary">exit_to_app</i>
