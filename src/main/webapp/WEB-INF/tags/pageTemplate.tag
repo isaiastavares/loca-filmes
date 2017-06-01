@@ -63,6 +63,7 @@
 	<script src="${contextPath}resources/js/widgets/pie-chart/pie-chart-nvd3.js"></script>
 	<script src="${contextPath}resources/js/widgets/table/table.js"></script>
 	<script src="${contextPath}resources/js/widgets/todo/todo.js"></script>
+    <script src="${contextPath}resources/js/app.js"></script>
 	<!-- endinject -->
 
     <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -82,6 +83,27 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
                     <a class="btn btn-danger btn-ok" data-dismiss="modal">Sim</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel1">Sucesso!</h4>
+                </div>
+
+                <div class="modal-body">
+                    <p>Registro Salvo com Sucesso!</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">OK</button>
                 </div>
             </div>
         </div>
