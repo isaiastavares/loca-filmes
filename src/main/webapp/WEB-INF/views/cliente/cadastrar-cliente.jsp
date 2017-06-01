@@ -153,11 +153,9 @@
                         </div>
                     </div>
 
-                    <div class="form__action">
-                        <button type="submit" id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                            Salvar
-                        </button>
-                    </div>
+                    <button type="submit" id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                        Salvar
+                    </button>
                 </form:form>
             </div>
         </div>
