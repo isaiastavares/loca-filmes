@@ -13,8 +13,8 @@
 					<div>
 						<h2 class="mdl-card__title-text">Filmes</h2>
 					</div>
-	                <div>
-		                <a class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-button-right" 
+	                <div class="mdl-button-right">
+		                <a class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" 
 		                	href="${s:mvcUrl('FC#cadastrarFilme').build()}">
 		                	<i class="material-icons">add</i>
 		                </a>
