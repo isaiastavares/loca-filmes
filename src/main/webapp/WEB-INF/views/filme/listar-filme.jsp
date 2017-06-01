@@ -102,9 +102,6 @@
 						<td class="mdl-data-table__cell--non-numeric">2h 40m</td>
 						<td class="mdl-data-table__cell--non-numeric">2017</td>
 						<td class="mdl-data-table__cell--non-numeric">
-							<a href="${s:mvcUrl('FC#locarFilme').build()}" title="Locar Filme">
-								<i class="material-icons">forward</i>
-							</a>
 							<a href="${s:mvcUrl('FC#cadastrarFilme').build()}" title="Editar">
 								<i class="material-icons">mode_edit</i>
 							</a>
@@ -119,9 +116,6 @@
 						<td class="mdl-data-table__cell--non-numeric">2h 13min</td>
 						<td class="mdl-data-table__cell--non-numeric">2017</td>
 						<td class="mdl-data-table__cell--non-numeric">
-							<a href="${s:mvcUrl('FC#locarFilme').build()}" title="Locar Filme">
-								<i class="material-icons">forward</i>
-							</a>
 							<a href="${s:mvcUrl('FC#cadastrarFilme').build()}" title="Editar">
 								<i class="material-icons">mode_edit</i>
 							</a>
@@ -137,9 +131,6 @@
 						<td class="mdl-data-table__cell--non-numeric">2h 49min</td>
 						<td class="mdl-data-table__cell--non-numeric">2014</td>
 						<td class="mdl-data-table__cell--non-numeric">
-							<a href="${s:mvcUrl('FC#locarFilme').build()}" title="Locar Filme">
-								<i class="material-icons">forward</i>
-							</a>
 							<a href="${s:mvcUrl('FC#cadastrarFilme').build()}" title="Editar">
 								<i class="material-icons">mode_edit</i>
 							</a>
@@ -154,9 +145,6 @@
 						<td class="mdl-data-table__cell--non-numeric">2h 31min</td>
 						<td class="mdl-data-table__cell--non-numeric">1999</td>
 						<td class="mdl-data-table__cell--non-numeric">
-							<a href="${s:mvcUrl('FC#locarFilme').build()}" title="Locar Filme">
-								<i class="material-icons">forward</i>
-							</a>
 							<a href="${s:mvcUrl('FC#cadastrarFilme').build()}" title="Editar">
 								<i class="material-icons">mode_edit</i>
 							</a>
@@ -167,6 +155,16 @@
 					</tr>
 				</tbody>
 			</table>
+			<div class="mdl-card__rodape">
+	                <div>
+		                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-light-blue" 
+		                	data-upgraded=",MaterialButton,MaterialRipple"   
+		                	href="${s:mvcUrl('FC#locarFilme').build()}" 
+		                	style="margin-top: 10px" >
+		                	<i class="material-icons">forward</i> Locar
+		                </a>
+	                </div>
+	        </div>
 		</div>
 	</main>
 </tags:pageTemplate>

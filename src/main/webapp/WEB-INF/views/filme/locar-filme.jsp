@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@ taglib tagdir="/WEB-INF/tags" prefix="tags" %>
-
+<%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
 <tags:pageTemplate titulo="${titulo}">
 
 <main class="mdl-layout__content mdl-color--grey-100">
@@ -102,8 +102,8 @@
                 </div>
                 <div class="mdl-card__supporting-text">
                 		<ul class="mdl-list pull-left">
-                			<li class="mdl-list__item">
-                                <div id="p3" class="mdl-progress mdl-js-progress mdl-progress--light-blue is-upgraded" data-upgraded=",MaterialProgress"><div class="progressbar bar bar1" style="width: 50%;"></div><div class="bufferbar bar bar2" style="width: 100%;"></div><div class="auxbar bar bar3" style="width: 0%;"></div></div>
+                			<li class="mdl-list__item" style="width: 700px;">
+                                <div id="p3" class="mdl-progress mdl-js-progress mdl-progress--light-blue is-upgraded" style="width: 500px;" data-upgraded=",MaterialProgress"><div class="progressbar bar bar1" style="width: 50%;"></div><div class="bufferbar bar bar2" style="width: 100%;"></div><div class="auxbar bar bar3" style="width: 0%;"></div></div>
                                 <script>
                                     document.querySelector('#p3').addEventListener('mdl-componentupgraded', function() {
                                         this.MaterialProgress.setProgress(100);
@@ -119,26 +119,28 @@
                 </div>
                 
                 <div class="form__action">
-                    <button id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-light-blue" data-upgraded=",MaterialButton,MaterialRipple">
+                    <a id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-light-blue" data-upgraded=",MaterialButton,MaterialRipple"
+                    	href="${s:mvcUrl('FC#listarFilme').build()}" >
                     	<i class="material-icons">forward</i>
                         Confirma
                         <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 271.783px; height: 271.783px; transform: translate(-50%, -50%) translate(95px, 26px);"></span></span>
-                    </button>
-                    <button id="anterior_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-purple" disabled="" data-upgraded=",MaterialButton,MaterialRipple">
+                    </a>
+                    <a id="anterior_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-purple" disabled="" data-upgraded=",MaterialButton,MaterialRipple">
                     	<i class="material-icons">reply</i>
                         Anterior
                         <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 271.783px; height: 271.783px; transform: translate(-50%, -50%) translate(95px, 26px);"></span></span>
-                    </button>
-                    <button id="proximo_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-purple" disabled="" data-upgraded=",MaterialButton,MaterialRipple">
+                    </a>
+                    <a id="proximo_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-purple" disabled="" data-upgraded=",MaterialButton,MaterialRipple">
                     	<i class="material-icons">forward</i>
                         Próximo
                         <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 271.783px; height: 271.783px; transform: translate(-50%, -50%) translate(95px, 26px);"></span></span>
-                    </button>
-                    <button id="cancela_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-red" data-upgraded=",MaterialButton,MaterialRipple">
+                    </a>
+                    <a id="cancela_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-red" data-upgraded=",MaterialButton,MaterialRipple"
+                    	href="${s:mvcUrl('FC#listarFilme').build()}" style="width: 115px;">
                     	<i class="material-icons">reply</i>
-                    		Cancela
+                    		Cancelar
                     	<span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 271.783px; height: 271.783px; transform: translate(-50%, -50%) translate(95px, 26px);"></span></span>
-                    </button>
+                    </a>
                 </div>
             </form>
         </div>
