@@ -74,7 +74,7 @@
                     Salvar
                 </button>
                 <a id="cancela_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-red" data-upgraded=",MaterialButton,MaterialRipple"
-                    		href="${s:mvcUrl('FC#cadastrarFilme').build()}" style="width: 115px;" >
+                    		href="${s:mvcUrl('FC#listarFilme').build()}" style="width: 115px;" >
                     		<i class="material-icons">reply</i>
                     			Cancelar
                     		<span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 271.783px; height: 271.783px; transform: translate(-50%, -50%) translate(95px, 26px);"></span></span>
