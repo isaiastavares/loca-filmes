@@ -8,21 +8,26 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("/filme")
 public class FilmeController {
-	
+
 	@RequestMapping("/")
     public ModelAndView listarFilme() {
     	ModelAndView modelAndView = new ModelAndView("filme/listar-filme");
     	modelAndView.addObject("titulo", "Filmes");
     	return modelAndView;
     }
-	
+
+	@RequestMapping("/pesquisar")
+    public ModelAndView pesquisarFilme() {
+    	return listarFilme();
+    }
+
 	@RequestMapping("/cadastro")
     public ModelAndView cadastrarFilme() {
     	ModelAndView modelAndView = new ModelAndView("filme/cadastrar-filme");
     	modelAndView.addObject("titulo", "Cadastrar Filme");
     	return modelAndView;
     }
-	
+
 	@RequestMapping(value = "/salvar", method = RequestMethod.POST)
     public ModelAndView salvarFilme() {
     	return listarFilme();

@@ -9,7 +9,7 @@
 <main class="mdl-layout__content mdl-color--grey-100">
     <div class="mdl-card mdl-shadow--2dp employer-form" action="#">
         <div class="mdl-card__title">
-            <h2>Cadastrar Filme</h2>
+            <h2>Filme</h2>
         </div>
 
         <div class="mdl-card__supporting-text">
@@ -70,11 +70,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="form__action">
-                    <button type="submit" id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                        Salvar
-                    </button>
-                </div>
+                <button type="submit" id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                    Salvar
+                </button>
             </form:form>
         </div>
     </div>

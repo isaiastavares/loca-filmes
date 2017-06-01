@@ -23,23 +23,21 @@
     <link rel="stylesheet" href="${cssPath}/login.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <!-- endinject -->
-    
+
 </head>
 <body>
-    <div class="container">
-	    <form:form servletRelativeAction="/login" method="post">
-		    <div class="row colored">
-		        <div id="contentdiv" class="contcustom">
-		            <span class="fa fa-spinner bigicon"></span>
-		            <h2>Loca Filmes</h2>
-		            <div>
-		                <input name="username" type="text" placeholder="Email" required="true">
-		                <input name="password" type="password" placeholder="Senha"  required="true">
-		                <button type="submit" class="medhidden redborder">Logar</button>
-		            </div>
-		        </div>
-		    </div>
-		</form:form>
-	</div>
+    <form:form servletRelativeAction="/login" method="post">
+	    <div class="row colored">
+	        <div id="contentdiv" class="contcustom">
+	            <span class="fa fa-spinner bigicon"></span>
+	            <h2>Loca Filmes</h2>
+	            <div>
+	                <input name="username" type="text" placeholder="Email" required="true">
+	                <input name="password" type="password" placeholder="Senha"  required="true">
+	                <button type="submit" class="medhidden redborder">Logar</button>
+	            </div>
+	        </div>
+	    </div>
+	</form:form>
 </body>
 </html>
