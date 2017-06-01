@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+<%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="tags" %>
 
 <tags:pageTemplate titulo="${titulo}">
@@ -11,7 +13,7 @@
         </div>
 
         <div class="mdl-card__supporting-text">
-            <form action="#" class="form">
+            <form:form action="${s:mvcUrl('FC#salvarFilme').build()}" method="POST" cssClass="form">
                 <div class="form__article">
 
                     <div class="mdl-grid">
@@ -69,11 +71,11 @@
                     </div>
                 </div>
                 <div class="form__action">
-                    <button id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                    <button type="submit" id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
                         Salvar
                     </button>
                 </div>
-            </form>
+            </form:form>
         </div>
     </div>
 </main>

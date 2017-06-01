@@ -30,9 +30,9 @@
 
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900' rel='stylesheet'
           type='text/css'>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- inject:css -->
+    <link rel="stylesheet" href="${contextPath}resources/fonts/material-icons.css" />
     <link rel="stylesheet" href="${contextPath}resources/css/lib/getmdl-select.min.css">
     <link rel="stylesheet" href="${contextPath}resources/css/lib/nv.d3.css">
     <link rel="stylesheet" href="${contextPath}resources/css/application.css">
