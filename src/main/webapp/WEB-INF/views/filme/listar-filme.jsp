@@ -163,6 +163,11 @@
 		                	style="margin-top: 10px" >
 		                	<i class="material-icons">forward</i> Locar
 		                </a>
+		                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-red" 
+		                	data-upgraded=",MaterialButton,MaterialRipple"    
+		                	style="margin-top: 10px" >
+		                	<i class="material-icons">forward</i> Devolver
+		                </a>
 	                </div>
 	        </div>
 		</div>
