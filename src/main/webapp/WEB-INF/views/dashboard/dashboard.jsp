@@ -18,7 +18,7 @@
 	                        <div class="mdl-layout-spacer"></div>
 	                        <div class="mdl-card__subtitle-text">
 	                            <i class="material-icons">room</i>
-								Goias, Brasil
+								Goiás, Brasil
 	                        </div>
 	                    </div>
 	                    <div class="mdl-card__supporting-text mdl-card--expand">

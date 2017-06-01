@@ -102,8 +102,8 @@
                 </div>
                 <div class="mdl-card__supporting-text">
                 		<ul class="mdl-list pull-left">
-                			<li class="mdl-list__item" style="width: 700px;">
-                                <div id="p3" class="mdl-progress mdl-js-progress mdl-progress--light-blue is-upgraded" style="width: 500px;" data-upgraded=",MaterialProgress"><div class="progressbar bar bar1" style="width: 50%;"></div><div class="bufferbar bar bar2" style="width: 100%;"></div><div class="auxbar bar bar3" style="width: 0%;"></div></div>
+                			<li class="mdl-list__item" style="width: 1500px;">
+                                <div id="p3" class="mdl-progress mdl-js-progress mdl-progress--light-blue is-upgraded" style="width: 100%;" data-upgraded=",MaterialProgress"><div class="progressbar bar bar1" style="width: 50%;"></div><div class="bufferbar bar bar2" style="width: 100%;"></div><div class="auxbar bar bar3" style="width: 0%;"></div></div>
                                 <script>
                                     document.querySelector('#p3').addEventListener('mdl-componentupgraded', function() {
                                         this.MaterialProgress.setProgress(100);
@@ -119,18 +119,18 @@
                 </div>
                 
                 <div class="form__action">
-                    <a id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-light-blue" data-upgraded=",MaterialButton,MaterialRipple"
+                    <a id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-light-blue" data-upgraded=",MaterialButton,MaterialRipple" style="width: 115px;"
                     	href="${s:mvcUrl('FC#listarFilme').build()}" >
                     	<i class="material-icons">forward</i>
                         Confirma
                         <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 271.783px; height: 271.783px; transform: translate(-50%, -50%) translate(95px, 26px);"></span></span>
                     </a>
-                    <a id="anterior_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-purple" disabled="" data-upgraded=",MaterialButton,MaterialRipple">
+                    <a id="anterior_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-purple" disabled="" data-upgraded=",MaterialButton,MaterialRipple" style="width: 115px;">
                     	<i class="material-icons">reply</i>
                         Anterior
                         <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 271.783px; height: 271.783px; transform: translate(-50%, -50%) translate(95px, 26px);"></span></span>
                     </a>
-                    <a id="proximo_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-purple" disabled="" data-upgraded=",MaterialButton,MaterialRipple">
+                    <a id="proximo_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-purple" disabled="" data-upgraded=",MaterialButton,MaterialRipple" style="width: 115px;">
                     	<i class="material-icons">forward</i>
                         Próximo
                         <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 271.783px; height: 271.783px; transform: translate(-50%, -50%) translate(95px, 26px);"></span></span>
