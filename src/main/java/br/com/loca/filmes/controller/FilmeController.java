@@ -28,4 +28,10 @@ public class FilmeController {
     	return listarFilme();
     }
 
+	@RequestMapping("/locar")
+    public ModelAndView locarFilme() {
+    	ModelAndView modelAndView = new ModelAndView("filme/locar-filme");
+    	modelAndView.addObject("titulo", "Locar Filme");
+    	return modelAndView;
+    }
 }
