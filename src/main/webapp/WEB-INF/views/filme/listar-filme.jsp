@@ -55,6 +55,14 @@
 					</tr>
 				</tbody>
 			</table>
+			<div class="mdl-card__rodape">
+	                <div>
+		                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-light-blue" data-upgraded=",MaterialButton,MaterialRipple" 
+		                	href="${s:mvcUrl('FC#locarFilme').build()}">
+		                	<i class="material-icons">forward</i>
+		                </a>
+	                </div>
+	        </div>
 		</div>
 	</main>
 </tags:pageTemplate>
