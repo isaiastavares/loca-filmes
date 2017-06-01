@@ -12097,3 +12097,6 @@ a {
 .mdl-button-right {
   margin-left: 1085px;
 }
+.mdl-dd-right {
+  float: right;
+}
