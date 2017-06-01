@@ -17,7 +17,7 @@
         </a>
         <a class="mdl-navigation__link" href="${s:mvcUrl('AC#account').build()}">
             <i class="material-icons" role="presentation">person</i>
-            Account
+            Conta
         </a>
         <a class="mdl-navigation__link" href="${s:mvcUrl('UIEC#uiElements').build()}">
             <i class="material-icons">view_comfy</i>
