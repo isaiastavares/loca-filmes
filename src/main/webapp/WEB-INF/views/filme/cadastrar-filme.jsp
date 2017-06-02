@@ -70,15 +70,17 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                    Salvar
-                </button>
-                <a id="cancela_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-red" data-upgraded=",MaterialButton,MaterialRipple"
-                    		href="${s:mvcUrl('FC#listarFilme').build()}" style="width: 115px;" >
-                    		<i class="material-icons">reply</i>
-                    			Cancelar
-                    		<span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 271.783px; height: 271.783px; transform: translate(-50%, -50%) translate(95px, 26px);"></span></span>
-                </a>
+                <div class="form__action">
+                    <button type="submit" id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                        Salvar
+                    </button>
+                    <a id="cancela_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-red" data-upgraded=",MaterialButton,MaterialRipple"
+                		href="${s:mvcUrl('FC#listarFilme').build()}" style="width: 115px;" >
+                		<i class="material-icons">reply</i>
+                			Cancelar
+                		<span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 271.783px; height: 271.783px; transform: translate(-50%, -50%) translate(95px, 26px);"></span></span>
+                	</a>
+                </div>
             </form:form>
         </div>
     </div>
