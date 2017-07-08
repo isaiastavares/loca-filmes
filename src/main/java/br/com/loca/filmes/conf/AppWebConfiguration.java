@@ -2,16 +2,15 @@ package br.com.loca.filmes.conf;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-import br.com.loca.filmes.controller.DashboardController;
-import br.com.loca.filmes.dao.UsuarioDAO;
-
 @EnableWebMvc
-@ComponentScan(basePackageClasses = { DashboardController.class, UsuarioDAO.class })
+@EnableJpaRepositories("br.com.loca.filmes.repository")
+@ComponentScan(basePackages = {"br.com.loca.filmes.service", "br.com.loca.filmes.dao", "br.com.loca.filmes.controller"})
 public class AppWebConfiguration extends WebMvcConfigurerAdapter {
 
 	@Bean

@@ -1,6 +1,11 @@
 package br.com.loca.filmes.controller;
 
+import br.com.loca.filmes.model.Filme;
+import br.com.loca.filmes.service.FilmeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -8,6 +13,9 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("/filme")
 public class FilmeController {
+
+	@Autowired
+	private FilmeService filmeService;
 
 	@RequestMapping("/")
     public ModelAndView listarFilme() {
@@ -23,13 +31,15 @@ public class FilmeController {
 
 	@RequestMapping("/cadastro")
     public ModelAndView cadastrarFilme() {
-    	ModelAndView modelAndView = new ModelAndView("filme/cadastrar-filme");
-    	modelAndView.addObject("titulo", "Cadastrar Filme");
+		ModelAndView modelAndView = new ModelAndView("filme/cadastrar-filme", "command", new Filme());
+		modelAndView.addObject("titulo", "Cadastrar Filme");
     	return modelAndView;
     }
 
 	@RequestMapping(value = "/salvar", method = RequestMethod.POST)
-    public ModelAndView salvarFilme() {
+	public ModelAndView salvarFilme(@ModelAttribute("SpringWeb") Filme filme, ModelMap model) {
+		filmeService.salvarFilme(filme);
+
     	return listarFilme();
     }
 

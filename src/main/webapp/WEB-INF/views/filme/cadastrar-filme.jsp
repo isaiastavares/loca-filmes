@@ -18,8 +18,8 @@
 
                     <div class="mdl-grid">
                         <div class="mdl-cell mdl-cell--8-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="title" value="Rei Arthur: A Lenda da Espada"/>
-                            <label class="mdl-textfield__label" for="title">Título</label>
+                            <form:input cssClass="mdl-textfield__input" path="titulo"/>
+                            <form:label cssClass="mdl-textfield__label" path="titulo">Título</form:label>
                         </div>
 
                         <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
@@ -50,23 +50,24 @@
 
                     <div class="mdl-grid">
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="time" value="2h 6min"/>
-                            <label class="mdl-textfield__label" for="time">Duração</label>
+                                <%--<form:input cssClass="mdl-textfield__input" path="duracao"/>--%>
+                                <%--<form:label cssClass="mdl-textfield__label" path="duracao">Duração</form:label>--%>
                         </div>
 
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="number" id="year" value="2017"/>
-                            <label class="mdl-textfield__label" for="year">Ano de Lançamento</label>
+                            <form:input cssClass="mdl-textfield__input" path="anoLancamento"/>
+                            <form:label cssClass="mdl-textfield__label"
+                                        path="anoLancamento">Ano de Lançamento</form:label>
                         </div>
 
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="age" value="14 anos"/>
-                            <label class="mdl-textfield__label" for="age">Censura</label>
+                            <form:input cssClass="mdl-textfield__input" path="censura"/>
+                            <form:label cssClass="mdl-textfield__label" path="censura">Censura</form:label>
                         </div>
 
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="number" id="number" value="3"/>
-                            <label class="mdl-textfield__label" for="number">Quantidade</label>
+                            <form:input cssClass="mdl-textfield__input" path="quantidade"/>
+                            <form:label cssClass="mdl-textfield__label" path="quantidade">Quantidade</form:label>
                         </div>
                     </div>
                 </div>
