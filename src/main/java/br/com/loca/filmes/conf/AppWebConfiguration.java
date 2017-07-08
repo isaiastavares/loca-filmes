@@ -10,7 +10,10 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @EnableWebMvc
 @EnableJpaRepositories("br.com.loca.filmes.repository")
-@ComponentScan(basePackages = {"br.com.loca.filmes.service", "br.com.loca.filmes.dao", "br.com.loca.filmes.controller"})
+@ComponentScan(basePackages = {"br.com.loca.filmes.service",
+		"br.com.loca.filmes.dao",
+		"br.com.loca.filmes.controller",
+		"br.com.loca.filmes.util"})
 public class AppWebConfiguration extends WebMvcConfigurerAdapter {
 
 	@Bean

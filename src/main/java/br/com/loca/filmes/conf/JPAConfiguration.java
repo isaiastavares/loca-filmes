@@ -1,9 +1,5 @@
 package br.com.loca.filmes.conf;
 
-import java.util.Properties;
-
-import javax.persistence.EntityManagerFactory;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -11,6 +7,9 @@ import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import javax.persistence.EntityManagerFactory;
+import java.util.Properties;
 
 @EnableTransactionManagement
 public class JPAConfiguration {
@@ -33,7 +32,7 @@ public class JPAConfiguration {
         Properties props = new Properties();
         props.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
         props.setProperty("hibernate.show_sql", "false");
-        props.setProperty("hibernate.hbm2ddl.auto", "update");
+        props.setProperty("hibernate.hbm2ddl.auto", "create-drop");
 
         factoryBean.setJpaProperties(props);
 

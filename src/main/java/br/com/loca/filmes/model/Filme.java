@@ -2,6 +2,7 @@ package br.com.loca.filmes.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import java.time.LocalDate;
 import java.time.LocalTime;
 
 /**
@@ -18,10 +19,10 @@ public class Filme extends Entidade {
     private LocalTime duracao;
 
     @Column(nullable = false)
-    private Byte censura;
+    private Integer censura;
 
     @Column(nullable = false)
-    private Short anoLancamento;
+    private LocalDate dataLancamento;
 
     @Column(nullable = false)
     private Integer quantidade;
@@ -42,20 +43,20 @@ public class Filme extends Entidade {
         this.duracao = duracao;
     }
 
-    public Byte getCensura() {
+    public Integer getCensura() {
         return censura;
     }
 
-    public void setCensura(Byte censura) {
+    public void setCensura(Integer censura) {
         this.censura = censura;
     }
 
-    public Short getAnoLancamento() {
-        return anoLancamento;
+    public LocalDate getDataLancamento() {
+        return dataLancamento;
     }
 
-    public void setAnoLancamento(Short anoLancamento) {
-        this.anoLancamento = anoLancamento;
+    public void setDataLancamento(LocalDate dataLancamento) {
+        this.dataLancamento = dataLancamento;
     }
 
     public Integer getQuantidade() {
