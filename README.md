@@ -30,16 +30,6 @@ Software para gerenciar locadoras de filmes desenvolvido no Laboratório de Dese
 
 `mvn org.apache.tomcat.maven:tomcat7-maven-plugin:run -Dmaven.tomcat.port=9090`
 
-## Depois de executar
-
-- Execute os inserts abaixo na respectiva ordem:
-
-`insert into Role values ('ROLE_ADMIN')`
-
-`insert into Usuario (email, nome, senha) values ('admin@admin.com.br', 'Administrador', '$2a$04$qP517gz1KNVEJUTCkUQCY.JzEoXzHFjLAhPQjrg5iP6Z/UmWjvUhq')`
-
-`insert into Usuario_Role(Usuario_email, roles_nome) values ('admin@admin.com.br', 'ROLE_ADMIN')`
-
 ## Acessando a aplicação
 
 Acesse `http://localhost:9090/loca-filmes` em qualquer navegador.
