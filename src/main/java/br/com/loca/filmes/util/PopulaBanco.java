@@ -2,10 +2,14 @@ package br.com.loca.filmes.util;
 
 import br.com.loca.filmes.model.Filme;
 import br.com.loca.filmes.repository.FilmeRepository;
+import br.com.loca.filmes.repository.MyJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -21,15 +25,23 @@ public class PopulaBanco {
     @Autowired
     private FilmeRepository filmeRepository;
 
+    @Autowired
+    private MyJpaRepository myJpaRepository;
+
+    @PersistenceContext
+    private EntityManager manager;
+
     @PostConstruct
     public void init() {
 
         for (Filme filme : getPessoas()) {
             filmeRepository.save(filme);
         }
+
+        insereDadosAdmin();
     }
 
-    public static List<Filme> getPessoas() {
+    private List<Filme> getPessoas() {
         List<Filme> filmes = new ArrayList<>();
 
         Filme filme1 = new Filme();
@@ -57,5 +69,12 @@ public class PopulaBanco {
         filmes.add(filme3);
 
         return filmes;
+    }
+
+    @Transactional
+    private void insereDadosAdmin() {
+        myJpaRepository.insertRole();
+        myJpaRepository.insertUsuario();
+        myJpaRepository.insertUsuarioRole();
     }
 }
