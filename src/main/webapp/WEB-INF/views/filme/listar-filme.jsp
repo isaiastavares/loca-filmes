@@ -3,6 +3,7 @@
 
 <%@ taglib tagdir="/WEB-INF/tags" prefix="tags"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <tags:pageTemplate titulo="${titulo}">
 
@@ -44,7 +45,7 @@
                         </div>
                     </div>
 
-                    <div class="mdl-grid">
+					<div class="mdl-grid">
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" id="time" value="2h 6min"/>
                             <label class="mdl-textfield__label" for="time">Duração</label>
@@ -96,63 +97,23 @@
 					</tr>
 				</thead>
 				<tbody>
+				<c:forEach items="${filmes}" var="filme">
 					<tr>
-						<td class="mdl-data-table__cell--non-numeric">Velozes e Furiosos 8 </td>
+						<td class="mdl-data-table__cell--non-numeric">${filme.titulo}</td>
 						<td class="mdl-data-table__cell--non-numeric">Ação</td>
-						<td class="mdl-data-table__cell--non-numeric">2h 40m</td>
-						<td class="mdl-data-table__cell--non-numeric">2017</td>
+						<td class="mdl-data-table__cell--non-numeric">${filme.duracao}</td>
+						<td class="mdl-data-table__cell--non-numeric">${filme.dataLancamento}</td>
 						<td class="mdl-data-table__cell--non-numeric">
 							<a href="${s:mvcUrl('FC#cadastrarFilme').build()}" title="Editar">
 								<i class="material-icons">mode_edit</i>
 							</a>
-							<a href="#" data-toggle="modal" data-target="#confirm-delete" title="Excluir">
+							<a href="${s:mvcUrl('FC#cadastrarFilme').build()}" data-toggle="modal"
+							   data-target="#confirm-delete" title="Excluir">
 								<i class="material-icons">delete</i>
 							</a>
 						</td>
 					</tr>
-					<tr>
-						<td class="mdl-data-table__cell--non-numeric">A Cabana</td>
-						<td class="mdl-data-table__cell--non-numeric">Fantasia/Drama</td>
-						<td class="mdl-data-table__cell--non-numeric">2h 13min</td>
-						<td class="mdl-data-table__cell--non-numeric">2017</td>
-						<td class="mdl-data-table__cell--non-numeric">
-							<a href="${s:mvcUrl('FC#cadastrarFilme').build()}" title="Editar">
-								<i class="material-icons">mode_edit</i>
-							</a>
-							<a href="#" data-toggle="modal" data-target="#confirm-delete" title="Excluir">
-								<i class="material-icons">delete</i>
-							</a>
-						</td>
-						</td>
-					</tr>
-					<tr>
-						<td class="mdl-data-table__cell--non-numeric">Interestelar</td>
-						<td class="mdl-data-table__cell--non-numeric">Ficção Científica</td>
-						<td class="mdl-data-table__cell--non-numeric">2h 49min</td>
-						<td class="mdl-data-table__cell--non-numeric">2014</td>
-						<td class="mdl-data-table__cell--non-numeric">
-							<a href="${s:mvcUrl('FC#cadastrarFilme').build()}" title="Editar">
-								<i class="material-icons">mode_edit</i>
-							</a>
-							<a href="#" data-toggle="modal" data-target="#confirm-delete" title="Excluir">
-								<i class="material-icons">delete</i>
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td class="mdl-data-table__cell--non-numeric">Clube da Luta</td>
-						<td class="mdl-data-table__cell--non-numeric">Drama</td>
-						<td class="mdl-data-table__cell--non-numeric">2h 31min</td>
-						<td class="mdl-data-table__cell--non-numeric">1999</td>
-						<td class="mdl-data-table__cell--non-numeric">
-							<a href="${s:mvcUrl('FC#cadastrarFilme').build()}" title="Editar">
-								<i class="material-icons">mode_edit</i>
-							</a>
-							<a href="#" data-toggle="modal" data-target="#confirm-delete" title="Excluir">
-								<i class="material-icons">delete</i>
-							</a>
-						</td>
-					</tr>
+				</c:forEach>
 				</tbody>
 			</table>
 			<div class="mdl-card__rodape">

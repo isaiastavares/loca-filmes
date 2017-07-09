@@ -5,6 +5,8 @@ import br.com.loca.filmes.repository.FilmeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by astr1x on 08/07/17.
  */
@@ -19,5 +21,9 @@ public class FilmeService {
         filme = filmeRepository.save(filme);
 
         return filme;
+    }
+
+    public List<Filme> listarFilmes() {
+        return filmeRepository.findAll();
     }
 }

@@ -55,9 +55,9 @@
                         </div>
 
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input cssClass="mdl-textfield__input" path="anoLancamento"/>
+                            <form:input cssClass="mdl-textfield__input" path="dataLancamento"/>
                             <form:label cssClass="mdl-textfield__label"
-                                        path="anoLancamento">Ano de Lançamento</form:label>
+                                        path="dataLancamento">Ano de Lançamento</form:label>
                         </div>
 
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">

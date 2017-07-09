@@ -21,7 +21,8 @@ public class FilmeController {
     public ModelAndView listarFilme() {
     	ModelAndView modelAndView = new ModelAndView("filme/listar-filme");
     	modelAndView.addObject("titulo", "Filmes");
-    	return modelAndView;
+		modelAndView.addObject("filmes", filmeService.listarFilmes());
+		return modelAndView;
     }
 
 	@RequestMapping("/pesquisar")
@@ -49,4 +50,11 @@ public class FilmeController {
     	modelAndView.addObject("titulo", "Locar Filme");
     	return modelAndView;
     }
+
+	@RequestMapping(value = "/delete", method = RequestMethod.DELETE)
+	public ModelAndView deletarFilme(@ModelAttribute("SpringWeb") Filme filme) {
+		filmeService.salvarFilme(filme);
+
+		return listarFilme();
+	}
 }
