@@ -1,8 +1,10 @@
 package br.com.loca.filmes.conf;
 
+import br.com.loca.filmes.model.LocalTimeConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -29,4 +31,8 @@ public class AppWebConfiguration extends WebMvcConfigurerAdapter {
 		configurer.enable();
 	}
 
+    @Override
+    public void addFormatters(FormatterRegistry registry) {
+        registry.addConverter(new LocalTimeConverter());
+    }
 }
