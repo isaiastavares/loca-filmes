@@ -91,12 +91,12 @@
                         </div>
 
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input cssClass="mdl-textfield__input" path="censura" maxlength="2"/>
+                            <form:input cssClass="mdl-textfield__input" path="censura" maxlength="2" onkeyup="somenteNumeros(this)"/>
                             <form:label cssClass="mdl-textfield__label" path="censura">Censura</form:label>
                         </div>
 
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input cssClass="mdl-textfield__input" path="quantidade" maxlength="2"/>
+                            <form:input cssClass="mdl-textfield__input" path="quantidade" maxlength="2" onkeyup="somenteNumeros(this)"/>
                             <form:label cssClass="mdl-textfield__label" path="quantidade">Quantidade</form:label>
                         </div>
                     </div>
