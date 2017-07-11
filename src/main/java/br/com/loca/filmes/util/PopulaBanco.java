@@ -1,19 +1,21 @@
 package br.com.loca.filmes.util;
 
-import br.com.loca.filmes.model.Filme;
-import br.com.loca.filmes.repository.FilmeRepository;
-import br.com.loca.filmes.repository.MyJpaRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
+
+import br.com.loca.filmes.model.Filme;
+import br.com.loca.filmes.repository.FilmeRepository;
+import br.com.loca.filmes.repository.MyJpaRepository;
 
 /**
  * Created by astr1x on 08/07/17.
@@ -46,7 +48,10 @@ public class PopulaBanco {
 
         Filme filme1 = new Filme();
         filme1.setTitulo("A Bela e a Fera");
-        filme1.setDataLancamento(LocalDate.of(2017, 3, 16));
+        
+        Calendar cFilme1 = Calendar.getInstance();
+        cFilme1.set(2017, 3, 16);
+        filme1.setDataLancamento(cFilme1.getTime());
         filme1.setDuracao(LocalTime.parse("01:20:34"));
         filme1.setCensura(0);
         filme1.setQuantidade(3);
@@ -54,7 +59,10 @@ public class PopulaBanco {
 
         Filme filme2 = new Filme();
         filme2.setTitulo("Piratas do Caribe");
-        filme2.setDataLancamento(LocalDate.of(2017, 5, 25));
+        
+        Calendar cFilme2 = Calendar.getInstance();
+        cFilme2.set(2017, 5, 25);
+        filme2.setDataLancamento(cFilme2.getTime());
         filme2.setDuracao(LocalTime.parse("02:09:20"));
         filme2.setCensura(12);
         filme2.setQuantidade(5);
@@ -62,7 +70,10 @@ public class PopulaBanco {
 
         Filme filme3 = new Filme();
         filme3.setTitulo("A Múmia");
-        filme3.setDataLancamento(LocalDate.of(2017, 3, 16));
+        
+        Calendar cFilme3 = Calendar.getInstance();
+        cFilme3.set(2017, 3, 16);
+        filme3.setDataLancamento(cFilme3.getTime());
         filme3.setDuracao(LocalTime.parse("01:51:10"));
         filme3.setCensura(12);
         filme3.setQuantidade(2);
