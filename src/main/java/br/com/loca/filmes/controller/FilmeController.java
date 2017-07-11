@@ -36,6 +36,13 @@ public class FilmeController {
 		modelAndView.addObject("generos", Genero.values());
 		return modelAndView;
     }
+	
+	@RequestMapping("/editar")
+    public ModelAndView editarFilme(Long id) {
+		Filme filme = filmeService.consultarFilme(id);
+		ModelAndView modelAndView = new ModelAndView("filme/cadastrar-filme", "command", filme);
+		return modelAndView;
+    }
 
 	@RequestMapping(value = "/salvar", method = RequestMethod.POST)
 	public ModelAndView salvarFilme(@ModelAttribute("SpringWeb") Filme filme, ModelMap model) {
@@ -51,13 +58,11 @@ public class FilmeController {
     	return modelAndView;
     }
 
-	@RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
-	public
-	@ResponseBody
-	void deletarFilme(@PathVariable("id") long id, ModelMap model) {
+	@RequestMapping(value = "/excluir")
+	public ModelAndView excluirFilme(Long id) {
 		Filme filme = filmeService.consultarFilme(id);
 		filmeService.deletarFilme(filme);
 
-		listarFilme();
+		return listarFilme();
 	}
 }

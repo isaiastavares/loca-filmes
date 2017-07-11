@@ -16,7 +16,9 @@ import java.time.LocalTime;
 @Entity
 public class Filme extends Entidade {
 
-    @Column(nullable = false)
+	private static final long serialVersionUID = -3086085358857810874L;
+
+	@Column(nullable = false)
     private String titulo;
 
     @Column(nullable = false)

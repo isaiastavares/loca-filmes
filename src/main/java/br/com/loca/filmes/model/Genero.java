@@ -1,11 +1,14 @@
 package br.com.loca.filmes.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by astr1x on 09/07/17.
  */
 
 public enum Genero {
-    ACAO("Acao"),
+    ACAO("Ação"),
     ANIMACAO("Animação"),
     AVENTURA("Aventura"),
     COMEDIA("Comédia"),

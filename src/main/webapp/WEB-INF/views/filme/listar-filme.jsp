@@ -104,10 +104,10 @@
 						<td class="mdl-data-table__cell--non-numeric">${filme.duracao}</td>
 						<td class="mdl-data-table__cell--non-numeric">${filme.dataLancamento}</td>
 						<td class="mdl-data-table__cell--non-numeric">
-							<a href="${s:mvcUrl('FC#cadastrarFilme').build()}" title="Editar">
+							<a href="${s:mvcUrl('FC#editarFilme').arg(0, filme.id).build()}" title="Editar">
 								<i class="material-icons">mode_edit</i>
 							</a>
-							<a href="delete/<c:out value="${filme.id}"/>" title="Excluir">
+							<a href="${s:mvcUrl('FC#excluirFilme').arg(0, filme.id).build()}" title="Excluir">
 								<i class="material-icons">delete</i>
 							</a>
 						</td>
