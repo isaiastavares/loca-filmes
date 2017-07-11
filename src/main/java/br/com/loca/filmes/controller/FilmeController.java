@@ -1,13 +1,12 @@
 package br.com.loca.filmes.controller;
 
 import br.com.loca.filmes.model.Filme;
+import br.com.loca.filmes.model.Genero;
 import br.com.loca.filmes.service.FilmeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -34,7 +33,8 @@ public class FilmeController {
     public ModelAndView cadastrarFilme() {
 		ModelAndView modelAndView = new ModelAndView("filme/cadastrar-filme", "command", new Filme());
 		modelAndView.addObject("titulo", "Cadastrar Filme");
-    	return modelAndView;
+		modelAndView.addObject("generos", Genero.values());
+		return modelAndView;
     }
 
 	@RequestMapping(value = "/salvar", method = RequestMethod.POST)
@@ -51,10 +51,13 @@ public class FilmeController {
     	return modelAndView;
     }
 
-	@RequestMapping(value = "/delete", method = RequestMethod.DELETE)
-	public ModelAndView deletarFilme(@ModelAttribute("SpringWeb") Filme filme) {
-		filmeService.salvarFilme(filme);
+	@RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
+	public
+	@ResponseBody
+	void deletarFilme(@PathVariable("id") long id, ModelMap model) {
+		Filme filme = filmeService.consultarFilme(id);
+		filmeService.deletarFilme(filme);
 
-		return listarFilme();
+		listarFilme();
 	}
 }

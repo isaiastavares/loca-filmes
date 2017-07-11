@@ -26,4 +26,12 @@ public class FilmeService {
     public List<Filme> listarFilmes() {
         return filmeRepository.findAll();
     }
+
+    public void deletarFilme(Filme filme) {
+        filmeRepository.delete(filme);
+    }
+
+    public Filme consultarFilme(Long id) {
+        return filmeRepository.findOne(id);
+    }
 }

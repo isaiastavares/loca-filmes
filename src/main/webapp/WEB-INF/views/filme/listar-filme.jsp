@@ -107,8 +107,7 @@
 							<a href="${s:mvcUrl('FC#cadastrarFilme').build()}" title="Editar">
 								<i class="material-icons">mode_edit</i>
 							</a>
-							<a href="${s:mvcUrl('FC#cadastrarFilme').build()}" data-toggle="modal"
-							   data-target="#confirm-delete" title="Excluir">
+							<a href="delete/<c:out value="${filme.id}"/>" title="Excluir">
 								<i class="material-icons">delete</i>
 							</a>
 						</td>
