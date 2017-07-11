@@ -22,38 +22,60 @@
                             <form:input cssClass="mdl-textfield__input" path="titulo"/>
                             <form:label cssClass="mdl-textfield__label" path="titulo">Título</form:label>
                         </div>
+                        
+<!--                         <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select"> -->
+<%--                             <form:input path="genero" id="genre" type="text" cssClass="mdl-textfield__input"/> --%>
+<!--                             <label class="mdl-textfield__label" for="genre"></label> -->
+<!--                             <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu dark_dropdown" for="genre"> -->
+<%--                                 <c:forEach items="${generos}" var="genero" varStatus="status"> --%>
+<%--                                     <li class="mdl-menu__item">${genero.nome}</li> --%>
+<%--                                 </c:forEach> --%>
+<!--                             </ul> -->
+<!--                             <label for="genre"> -->
+<!--                                 <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i> -->
+<!--                             </label> -->
+<!--                         </div> -->
 
-                        <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<!--                         <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> -->
+                        
+<%-- 	                        <c:forEach items="${generos}" var="genero" varStatus="status"> --%>
+<!-- 						        <div> -->
+<%-- 						            <label>${genero.nome}</label> --%>
+<%-- 						            <label>${status.index}</label> --%>
+<%-- 						            <form:input path="generos[${status.index}].nome" /> --%>
+<%-- 						            <form:hidden path="generos[${status.index}].nome" value="${genero}" /> --%>
+<!-- 						        </div> -->
+<%-- 						    </c:forEach> --%>
 
-                                <%--TODO fazer select funcionar com enum--%>
-                                <%--<form:label cssClass="mdl-textfield__label" path="titulo">Gênero</form:label>--%>
+<!--                             TODO fazer select funcionar com enum -->
+<%--                             <form:label cssClass="mdl-textfield__label" path="titulo">Gênero</form:label> --%>
 
-                                <%--<form:select path="genero">--%>
-                                <%--<form:options items="${generos}" itemValue="nome" itemLabel="nome" />--%>
-                                <%--</form:select>--%>
+<%--                             <form:select path="genero"> --%>
+<%--                             <form:options items="${generos}" itemValue="nome" itemLabel="nome" /> --%>
+<%--                             </form:select> --%>
 
-                                <%--<input class="mdl-textfield__input" value="Suspense" type="text" id="type" readonly tabIndex="-1"/>--%>
+<!--                             <input class="mdl-textfield__input" value="Suspense" type="text" id="type" readonly tabIndex="-1"/> -->
 
-                                <%--<label class="mdl-textfield__label" for="type">Gênero</label>--%>
+<!--                             <label class="mdl-textfield__label" for="type">Gênero</label> -->
 
-                                <%--<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu dark_dropdown" for="type">--%>
-                                <%--<li class="mdl-menu__item">Ação</li>--%>
-                                <%--<li class="mdl-menu__item">Animação</li>--%>
-                                <%--<li class="mdl-menu__item">Aventura</li>--%>
-                                <%--<li class="mdl-menu__item">Comédia</li>--%>
-                                <%--<li class="mdl-menu__item">Fantasia</li>--%>
-                                <%--<li class="mdl-menu__item">Faroeste</li>--%>
-                                <%--<li class="mdl-menu__item">Ficção científica</li>--%>
-                                <%--<li class="mdl-menu__item">Guerra</li>--%>
-                                <%--<li class="mdl-menu__item">Musicais</li>--%>
-                                <%--<li class="mdl-menu__item">Romance</li>--%>
-                                <%--<li class="mdl-menu__item">Suspense</li>--%>
-                                <%--</ul>--%>
+<!--                             <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu dark_dropdown" for="type"> -->
+<!--                             <li class="mdl-menu__item">Ação</li> -->
+<!--                             <li class="mdl-menu__item">Animação</li> -->
+<!--                             <li class="mdl-menu__item">Aventura</li> -->
+<!--                             <li class="mdl-menu__item">Comédia</li> -->
+<!--                             <li class="mdl-menu__item">Fantasia</li> -->
+<!--                             <li class="mdl-menu__item">Faroeste</li> -->
+<!--                             <li class="mdl-menu__item">Ficção científica</li> -->
+<!--                             <li class="mdl-menu__item">Guerra</li> -->
+<!--                             <li class="mdl-menu__item">Musicais</li> -->
+<!--                             <li class="mdl-menu__item">Romance</li> -->
+<!--                             <li class="mdl-menu__item">Suspense</li> -->
+<!--                             </ul> -->
 
-                                <%--<label class="mdl-dd-right" for="type">--%>
-                                <%--<i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>--%>
-                                <%--</label>--%>
-                        </div>
+<!--                             <label class="mdl-dd-right" for="type"> -->
+<!--                             <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i> -->
+<!--                             </label> -->
+<!--                         </div> -->
                     </div>
 
                     <div class="mdl-grid">
@@ -63,18 +85,18 @@
                         </div>
 
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input cssClass="mdl-textfield__input date" path="dataLancamento"/>
+                            <form:input cssClass="mdl-textfield__input" path="dataLancamento" onkeypress="mascaraData(this)"/>
                             <form:label cssClass="mdl-textfield__label"
                                         path="dataLancamento">Data de Lançamento</form:label>
                         </div>
 
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input cssClass="mdl-textfield__input somenteDigitos" path="censura" maxlength="2"/>
+                            <form:input cssClass="mdl-textfield__input" path="censura" maxlength="2"/>
                             <form:label cssClass="mdl-textfield__label" path="censura">Censura</form:label>
                         </div>
 
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input cssClass="mdl-textfield__input somenteDigitos" path="quantidade" maxlength="2"/>
+                            <form:input cssClass="mdl-textfield__input" path="quantidade" maxlength="2"/>
                             <form:label cssClass="mdl-textfield__label" path="quantidade">Quantidade</form:label>
                         </div>
                     </div>
