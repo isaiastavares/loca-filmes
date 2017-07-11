@@ -43,6 +43,7 @@
             src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <link data-require="bootstrap-css@3.1.1" data-semver="3.1.1" rel="stylesheet"
           href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+
 </head>
 <body>
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header is-small-screen">
@@ -63,6 +64,7 @@
 	<script src="${contextPath}resources/js/widgets/pie-chart/pie-chart-nvd3.js"></script>
 	<script src="${contextPath}resources/js/widgets/table/table.js"></script>
 	<script src="${contextPath}resources/js/widgets/todo/todo.js"></script>
+    <script src="${contextPath}resources/js/jquery.mask.min.js"></script>
     <script src="${contextPath}resources/js/app.js"></script>
 	<!-- endinject -->
 

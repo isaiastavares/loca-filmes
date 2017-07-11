@@ -58,23 +58,23 @@
 
                     <div class="mdl-grid">
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input cssClass="mdl-textfield__input" path="duracao"/>
+                            <form:input cssClass="mdl-textfield__input time" path="duracao"/>
                             <form:label cssClass="mdl-textfield__label" path="duracao">Duração</form:label>
                         </div>
 
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input cssClass="mdl-textfield__input" path="dataLancamento"/>
+                            <form:input cssClass="mdl-textfield__input date" path="dataLancamento"/>
                             <form:label cssClass="mdl-textfield__label"
                                         path="dataLancamento">Data de Lançamento</form:label>
                         </div>
 
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input cssClass="mdl-textfield__input" path="censura"/>
+                            <form:input cssClass="mdl-textfield__input somenteDigitos" path="censura" maxlength="2"/>
                             <form:label cssClass="mdl-textfield__label" path="censura">Censura</form:label>
                         </div>
 
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input cssClass="mdl-textfield__input" path="quantidade"/>
+                            <form:input cssClass="mdl-textfield__input somenteDigitos" path="quantidade" maxlength="2"/>
                             <form:label cssClass="mdl-textfield__label" path="quantidade">Quantidade</form:label>
                         </div>
                     </div>
