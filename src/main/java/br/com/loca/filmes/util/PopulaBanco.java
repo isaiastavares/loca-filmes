@@ -55,7 +55,7 @@ public class PopulaBanco {
         Filme filme2 = new Filme();
         filme2.setTitulo("Piratas do Caribe");
         filme2.setDataLancamento(LocalDate.of(2017, 5, 25));
-        filme2.setDuracao(LocalTime.parse("02:09:00"));
+        filme2.setDuracao(LocalTime.parse("02:09:20"));
         filme2.setCensura(12);
         filme2.setQuantidade(5);
         filmes.add(filme2);
@@ -63,7 +63,7 @@ public class PopulaBanco {
         Filme filme3 = new Filme();
         filme3.setTitulo("A Múmia");
         filme3.setDataLancamento(LocalDate.of(2017, 3, 16));
-        filme3.setDuracao(LocalTime.parse("01:51:00"));
+        filme3.setDuracao(LocalTime.parse("01:51:10"));
         filme3.setCensura(12);
         filme3.setQuantidade(2);
         filmes.add(filme3);

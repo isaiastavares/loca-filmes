@@ -16,7 +16,9 @@
         <div class="mdl-card__supporting-text">
             <form:form action="${s:mvcUrl('FC#salvarFilme').build()}" method="POST" cssClass="form">
                 <div class="form__article">
-
+                
+                	<form:hidden path="id"/>
+                	
                     <div class="mdl-grid">
                         <div class="mdl-cell mdl-cell--8-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <form:input cssClass="mdl-textfield__input" path="titulo"/>

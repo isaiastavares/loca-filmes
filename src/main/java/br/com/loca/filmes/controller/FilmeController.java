@@ -45,7 +45,7 @@ public class FilmeController {
     }
 
 	@RequestMapping(value = "/salvar", method = RequestMethod.POST)
-	public ModelAndView salvarFilme(@ModelAttribute("SpringWeb") Filme filme, ModelMap model) {
+	public ModelAndView salvarFilme(Filme filme) {
 		filmeService.salvarFilme(filme);
 
     	return listarFilme();
