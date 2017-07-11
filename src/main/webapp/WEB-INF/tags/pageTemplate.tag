@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="${contextPath}resources/fonts/material-icons.css" />
     <link rel="stylesheet" href="${contextPath}resources/css/lib/getmdl-select.min.css">
     <link rel="stylesheet" href="${contextPath}resources/css/lib/nv.d3.css">
+    <link rel="stylesheet" href="${contextPath}resources/css/materialize.min.css">
     <link rel="stylesheet" href="${contextPath}resources/css/application.css">
     <!-- endinject -->
 
@@ -58,6 +59,7 @@
 	<script src="${contextPath}resources/js/d3.js"></script>
 	<script src="${contextPath}resources/js/getmdl-select.min.js"></script>
 	<script src="${contextPath}resources/js/material.js"></script>
+	<script src="${contextPath}resources/js/materialize.min.js"></script>
 	<script src="${contextPath}resources/js/nv.d3.js"></script>
 	<script src="${contextPath}resources/js/widgets/employer-form/employer-form.js"></script>
 	<script src="${contextPath}resources/js/widgets/line-chart/line-chart-nvd3.js"></script>
