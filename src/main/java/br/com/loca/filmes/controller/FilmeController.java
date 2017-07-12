@@ -25,8 +25,11 @@ public class FilmeController {
     }
 
 	@RequestMapping("/pesquisar")
-    public ModelAndView pesquisarFilme() {
-    	return listarFilme();
+    public ModelAndView pesquisarFilme(Filme filme) {
+		ModelAndView modelAndView = new ModelAndView("filme/listar-filme");
+    	modelAndView.addObject("titulo", "Filmes");
+		modelAndView.addObject("filmes", filmeService.pesquisarFilmes(filme));
+    	return modelAndView;
     }
 
 	@RequestMapping("/cadastro")

@@ -19,7 +19,6 @@ public class FilmeService {
 
     public Filme salvarFilme(Filme filme) {
         filme = filmeRepository.save(filme);
-
         return filme;
     }
 
@@ -33,5 +32,40 @@ public class FilmeService {
 
     public Filme consultarFilme(Long id) {
         return filmeRepository.findOne(id);
+    }
+    
+    public List<Filme> pesquisarFilmes(Filme parametrosFilme) {
+    	List<Filme> filmesSelecionados = null;
+    	filmesSelecionados = filtraFilmes(filmesSelecionados, parametrosFilme);
+
+    	return filmesSelecionados;
+    }
+    
+    private List<Filme> filtraFilmes(List<Filme> filmesSelecionados, Filme parametrosFilme){
+    	List<Filme> todosFilmes = filmeRepository.findAll();
+    	Filme filme;
+    	
+    	//percorre todos os filmes
+    	while (todosFilmes.isEmpty()){
+    		int contador = 0;
+    		filme = todosFilmes.get(contador);
+    		
+    		//Verifica se o registro atual tem os parametros da busca
+    		if (((filme.getCensura() == parametrosFilme.getCensura() )||( parametrosFilme.getCensura() == null ))&&((
+    			filme.getDataLancamento() == parametrosFilme.getDataLancamento() )||( parametrosFilme.getDataLancamento() == null ))&&(( 
+    			filme.getDuracao() == parametrosFilme.getDuracao() )||( parametrosFilme.getDuracao() == null ))&&((
+    			filme.getGenero() == parametrosFilme.getGenero() )||( parametrosFilme.getGenero() == null ))&&((
+    			filme.getTitulo() == parametrosFilme.getTitulo() )||( parametrosFilme.getTitulo() == null ))&&((
+    			filme.getId() == parametrosFilme.getId() )||( parametrosFilme.getId() == null ))&&((
+    			filme.getQuantidade() == parametrosFilme.getQuantidade() )||( parametrosFilme.getCensura() == null)))
+    		{
+    			filmesSelecionados.add(filme);
+    		}
+    		
+    		todosFilmes.remove(contador);
+			contador++;
+		}
+    	
+    	return filmesSelecionados;
     }
 }
