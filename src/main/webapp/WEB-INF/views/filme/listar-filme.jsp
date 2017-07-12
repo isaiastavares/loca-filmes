@@ -15,14 +15,14 @@
 	            <form:form action="${s:mvcUrl('FC#pesquisarFilme').build()}" method="POST" cssClass="form">
                     <div class="mdl-grid">
                         <div class="mdl-cell mdl-cell--8-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input class="mdl-textfield__input" path="titulo" type="text" id="title" value="Rei Arthur: A Lenda da Espada"/>
-                            <form:label class="mdl-textfield__label" for="title" path="titulo">Título</form:label>
+                            <input class="mdl-textfield__input" type="text" id="title" value="Rei Arthur: A Lenda da Espada"/>
+                            <label class="mdl-textfield__label" for="title">Título</label>
                         </div>
 
                         <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-                            <form:input class="mdl-textfield__input" path="genero" value="Suspense" type="text" id="type" readonly tabIndex="-1"/>
+                            <input class="mdl-textfield__input" value="Suspense" type="text" id="type" readonly tabIndex="-1"/>
 
-                            <form:label class="mdl-textfield__label" path="genero" for="type">Gênero</form:label>
+                            <label class="mdl-textfield__label" for="type">Gênero</label>
 
                             <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu dark_dropdown" for="type">
                                 <li class="mdl-menu__item">Ação</li>
@@ -47,28 +47,27 @@
 
 					<div class="mdl-grid">
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input class="mdl-textfield__input" path="duracao" type="text" id="time" value="2h 6min"/>
-                            <form:label class="mdl-textfield__label" path="duracao" for="time">Duração</form:label>
+                            <input class="mdl-textfield__input" type="text" id="time" value="2h 6min"/>
+                            <label class="mdl-textfield__label" for="time">Duração</label>
                         </div>
 
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input class="mdl-textfield__input" path="dataLancamento" type="number" id="year" value="2017"/>
-                            <form:label class="mdl-textfield__label" path="dataLancamento" for="year">Ano de Lançamento</form:label>
+                            <input class="mdl-textfield__input" type="number" id="year" value="2017"/>
+                            <label class="mdl-textfield__label" for="year">Ano de Lançamento</label>
                         </div>
 
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input class="mdl-textfield__input" path="censura" type="text" id="age" value="14 anos"/>
-                            <form:label class="mdl-textfield__label" path="censura" for="age">Censura</form:label>
+                            <input class="mdl-textfield__input" type="text" id="age" value="14 anos"/>
+                            <label class="mdl-textfield__label" for="age">Censura</label>
                         </div>
 
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input class="mdl-textfield__input" path="quantidade" type="number" id="number" value="3"/>
-                            <form:label class="mdl-textfield__label" path="quantidade" for="number">Quantidade</form:label>
+                            <input class="mdl-textfield__input" type="number" id="number" value="3"/>
+                            <label class="mdl-textfield__label" for="number">Quantidade</label>
                         </div>
                     </div>
-                    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="margin-left: 13px"
-                    href="${s:mvcUrl('FC#pesquisarFilme').build()}">
-                         Pesquisar
+                    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="margin-left: 13px">
+                        Pesquisar
                     </button>
 	            </form:form>
 	        </div>
@@ -101,7 +100,7 @@
 				<c:forEach items="${filmes}" var="filme">
 					<tr>
 						<td class="mdl-data-table__cell--non-numeric">${filme.titulo}</td>
-						<td class="mdl-data-table__cell--non-numeric">${filme.genero}</td>
+						<td class="mdl-data-table__cell--non-numeric">Ação</td>
 						<td class="mdl-data-table__cell--non-numeric">${filme.duracao}</td>
 						<td class="mdl-data-table__cell--non-numeric">${filme.dataLancamento}</td>
 						<td class="mdl-data-table__cell--non-numeric">

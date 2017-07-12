@@ -1,9 +1,13 @@
 package br.com.loca.filmes.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import java.time.LocalDate;
 import java.time.LocalTime;
-
-import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * Created by astr1x on 08/07/17.

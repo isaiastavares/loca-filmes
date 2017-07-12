@@ -110,7 +110,7 @@
                         </div>
 
                     </div>
-                    <div class="form__article">
+                                        <div class="form__article">
                         <h3>Endereço</h3>
 
                         <div class="mdl-grid">
