@@ -3,6 +3,12 @@ package br.com.loca.filmes.controller;
 import br.com.loca.filmes.model.Filme;
 import br.com.loca.filmes.model.Genero;
 import br.com.loca.filmes.service.FilmeService;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import javax.persistence.EnumType;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -25,8 +31,11 @@ public class FilmeController {
     }
 
 	@RequestMapping("/pesquisar")
-    public ModelAndView pesquisarFilme() {
-    	return listarFilme();
+    public ModelAndView pesquisarFilme(Filme filme) {
+		ModelAndView modelAndView = new ModelAndView("filme/listar-filme");
+    	modelAndView.addObject("titulo", "Filmes");
+		modelAndView.addObject("filmes", filmeService.pesquisarFilmes(filme));
+    	return modelAndView;
     }
 
 	@RequestMapping("/cadastro")
@@ -62,7 +71,6 @@ public class FilmeController {
 	public ModelAndView excluirFilme(Long id) {
 		Filme filme = filmeService.consultarFilme(id);
 		filmeService.deletarFilme(filme);
-
 		return listarFilme();
 	}
 }

@@ -1,6 +1,9 @@
 package br.com.loca.filmes.repository;
 
 import br.com.loca.filmes.model.Filme;
+
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 /**
