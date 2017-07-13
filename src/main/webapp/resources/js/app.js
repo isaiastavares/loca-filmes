@@ -19,7 +19,7 @@
         }
     });
 
-    $('.time').mask('00:00:00', {'translation': {0: {pattern: /[0-9]/}}});
+    $('.time').mask('00:00', {'translation': {0: {pattern: /[0-9]/}}});
 
     $('.somenteDigitos').mask('000', {'translation': {0: {pattern: /[0-9]/}}});
 

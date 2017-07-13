@@ -105,7 +105,7 @@
                     </div>
                 </div>
                 <div class="form__action">
-                    <button type="submit" id="submit_button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
                         Salvar
                     </button>
                     <a id="cancela_button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored-red" data-upgraded=",MaterialButton,MaterialRipple"
