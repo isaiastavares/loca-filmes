@@ -1,13 +1,15 @@
 package br.com.loca.filmes.model;
 
-import org.springframework.format.annotation.DateTimeFormat;
+import java.time.LocalTime;
+import java.util.Calendar;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import java.time.LocalDate;
-import java.time.LocalTime;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  * Created by astr1x on 08/07/17.
@@ -27,9 +29,9 @@ public class Filme extends Entidade {
     @Column(nullable = false)
     private Integer censura;
 
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    @Temporal(TemporalType.DATE)
     @Column(nullable = false)
-    private LocalDate dataLancamento;
+    private Date dataLancamento;
 
     @Column(nullable = false)
     private Integer quantidade;
@@ -61,11 +63,11 @@ public class Filme extends Entidade {
         this.censura = censura;
     }
 
-    public LocalDate getDataLancamento() {
+    public Date getDataLancamento() {
         return dataLancamento;
     }
 
-    public void setDataLancamento(LocalDate dataLancamento) {
+    public void setDataLancamento(Date dataLancamento) {
         this.dataLancamento = dataLancamento;
     }
 

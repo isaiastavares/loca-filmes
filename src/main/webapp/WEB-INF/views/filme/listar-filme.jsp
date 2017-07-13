@@ -4,6 +4,7 @@
 <%@ taglib tagdir="/WEB-INF/tags" prefix="tags"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <tags:pageTemplate titulo="${titulo}">
 
@@ -103,7 +104,9 @@
 						<td class="mdl-data-table__cell--non-numeric">${filme.titulo}</td>
 						<td class="mdl-data-table__cell--non-numeric">Ação</td>
 						<td class="mdl-data-table__cell--non-numeric">${filme.duracao}</td>
-						<td class="mdl-data-table__cell--non-numeric">${filme.dataLancamento}</td>
+						<td class="mdl-data-table__cell--non-numeric">
+							<fmt:formatDate pattern="dd/MM/yyyy" value="${filme.dataLancamento}" />
+						</td>
 						<td class="mdl-data-table__cell--non-numeric">
 							<a href="${s:mvcUrl('FC#editarFilme').arg(0, filme.id).build()}" title="Editar">
 								<i class="material-icons">mode_edit</i>
