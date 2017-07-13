@@ -50,9 +50,9 @@ public class FilmeService {
 		query.append("select * from filme where 1=1");
     	
     	if (!filme.getTitulo().isEmpty()) {
-    		query.append(" and titulo like '%")
+    		query.append(" and LOWER(titulo) like LOWER('%")
     		.append(filme.getTitulo())
-    		.append("%'");
+    		.append("%')");
     	}
     	
     	if (filme.getDataLancamento() != null) {
