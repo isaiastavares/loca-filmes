@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@ taglib tagdir="/WEB-INF/tags" prefix="tags"%>
-<%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
+<%@ taglib prefix="s" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
@@ -16,59 +16,54 @@
 	            <form:form action="${s:mvcUrl('FC#pesquisarFilme').build()}" method="POST" cssClass="form">
                     <div class="mdl-grid">
                         <div class="mdl-cell mdl-cell--8-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input class="mdl-textfield__input" path="titulo" type="text" id="title" value="Rei Arthur: A Lenda da Espada"/>
-                            <form:label class="mdl-textfield__label" for="title" path="titulo">Título</form:label>
+                            <form:input cssClass="mdl-textfield__input" path="titulo"/>
+                            <form:label cssClass="mdl-textfield__label" path="titulo">Título</form:label>
                         </div>
 
-                        <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-                            <form:input class="mdl-textfield__input" path="genero" value="Suspense" type="text" id="type" readonly tabIndex="-1"/>
+<!--                         <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select"> -->
+<%--                             <form:input class="mdl-textfield__input" path="genero" value="Suspense" type="text" id="type"/> --%>
 
-                            <form:label class="mdl-textfield__label" path="genero" for="type">Gênero</form:label>
+<%--                             <form:label class="mdl-textfield__label" path="genero" for="type">Gênero</form:label> --%>
 
-                            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu dark_dropdown" for="type">
-                                <li class="mdl-menu__item">Ação</li>
-                                <li class="mdl-menu__item">Animação</li>
-                                <li class="mdl-menu__item">Aventura</li>
-                                <li class="mdl-menu__item">Comédia</li>
-                                <li class="mdl-menu__item">Fantasia</li>
-                                <li class="mdl-menu__item">Faroeste</li>
-                                <li class="mdl-menu__item">Ficção científica</li>
-                                <li class="mdl-menu__item">Guerra</li>
-                                <li class="mdl-menu__item">Musicais</li>
-                                <li class="mdl-menu__item">Romance</li>
-                                <li class="mdl-menu__item">Suspense</li>
+<!--                             <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu dark_dropdown" for="type"> -->
+<!--                                 <li class="mdl-menu__item">Ação</li> -->
+<!--                                 <li class="mdl-menu__item">Animação</li> -->
+<!--                                 <li class="mdl-menu__item">Aventura</li> -->
+<!--                                 <li class="mdl-menu__item">Comédia</li> -->
+<!--                                 <li class="mdl-menu__item">Fantasia</li> -->
+<!--                                 <li class="mdl-menu__item">Faroeste</li> -->
+<!--                                 <li class="mdl-menu__item">Ficção científica</li> -->
+<!--                                 <li class="mdl-menu__item">Guerra</li> -->
+<!--                                 <li class="mdl-menu__item">Musicais</li> -->
+<!--                                 <li class="mdl-menu__item">Romance</li> -->
+<!--                                 <li class="mdl-menu__item">Suspense</li> -->
 
-                            </ul>
+<!--                             </ul> -->
 
-                            <label class="mdl-dd-right" for="type">
-                                <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i>
-                            </label>
-                        </div>
+<!--                             <label class="mdl-dd-right" for="type"> -->
+<!--                                 <i class="mdl-icon-toggle__label material-icons">arrow_drop_down</i> -->
+<!--                             </label> -->
+<!--                         </div> -->
                     </div>
 
 					<div class="mdl-grid">
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input class="mdl-textfield__input" path="duracao" type="text" id="time" value="2h 6min"/>
-                            <form:label class="mdl-textfield__label" path="duracao" for="time">Duração</form:label>
+                            <form:input cssClass="mdl-textfield__input" path="dataLancamento" onkeypress="mascaraData(this)"/>
+                            <form:label cssClass="mdl-textfield__label"
+                                        path="dataLancamento">Data de Lançamento</form:label>
                         </div>
 
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input class="mdl-textfield__input" path="dataLancamento" type="number" id="year" value="2017"/>
-                            <form:label class="mdl-textfield__label" path="dataLancamento" for="year">Ano de Lançamento</form:label>
+                            <form:input cssClass="mdl-textfield__input" path="censura" maxlength="2" onkeyup="somenteNumeros(this)"/>
+                            <form:label cssClass="mdl-textfield__label" path="censura">Censura</form:label>
                         </div>
-
+                        
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input class="mdl-textfield__input" path="censura" type="text" id="age" value="14 anos"/>
-                            <form:label class="mdl-textfield__label" path="censura" for="age">Censura</form:label>
-                        </div>
-
-                        <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input class="mdl-textfield__input" path="quantidade" type="number" id="number" value="3"/>
-                            <form:label class="mdl-textfield__label" path="quantidade" for="number">Quantidade</form:label>
+                            <form:input cssClass="mdl-textfield__input" path="quantidade" maxlength="2" onkeyup="somenteNumeros(this)"/>
+                            <form:label cssClass="mdl-textfield__label" path="quantidade">Quantidade</form:label>
                         </div>
                     </div>
-                    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="margin-left: 13px"
-                    href="${s:mvcUrl('FC#pesquisarFilme').arg(0, filme).build()}">
+                    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
                          Pesquisar
                     </button>
 	            </form:form>
@@ -93,9 +88,10 @@
 					<tr>
 						<th class="mdl-data-table__cell--non-numeric">Título</th>
 						<th class="mdl-data-table__cell--non-numeric">Gênero</th>
-						<th class="mdl-data-table__cell--non-numeric">Duração</th>
-						<th class="mdl-data-table__cell--non-numeric">Ano de Lançamento</th>
-						<th style="width: 7%" class="mdl-data-table__cell--non-numeric">Ações</th>
+						<th class="mdl-data-table__cell--non-numeric">Data de Lançamento</th>
+						<th class="mdl-data-table__cell--non-numeric">Censura</th>
+						<th class="mdl-data-table__cell--non-numeric">Quantidade</th>
+						<th class="mdl-data-table__cell--non-numeric">Ações</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -103,10 +99,11 @@
 					<tr>
 						<td class="mdl-data-table__cell--non-numeric">${filme.titulo}</td>
 						<td class="mdl-data-table__cell--non-numeric">Ação</td>
-						<td class="mdl-data-table__cell--non-numeric">${filme.duracao}</td>
 						<td class="mdl-data-table__cell--non-numeric">
 							<fmt:formatDate pattern="dd/MM/yyyy" value="${filme.dataLancamento}" />
 						</td>
+						<td class="mdl-data-table__cell--non-numeric">${filme.censura}</td>
+						<td class="mdl-data-table__cell--non-numeric">${filme.quantidade}</td>
 						<td class="mdl-data-table__cell--non-numeric">
 							<a href="${s:mvcUrl('FC#editarFilme').arg(0, filme.id).build()}" title="Editar">
 								<i class="material-icons">mode_edit</i>

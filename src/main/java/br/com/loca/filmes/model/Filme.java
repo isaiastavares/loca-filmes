@@ -1,7 +1,6 @@
 package br.com.loca.filmes.model;
 
 import java.time.LocalTime;
-import java.util.Calendar;
 import java.util.Date;
 
 import javax.persistence.Column;

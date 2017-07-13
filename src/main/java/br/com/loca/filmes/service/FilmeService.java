@@ -1,11 +1,17 @@
 package br.com.loca.filmes.service;
 
-import br.com.loca.filmes.model.Filme;
-import br.com.loca.filmes.repository.FilmeRepository;
+import java.text.SimpleDateFormat;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import br.com.loca.filmes.model.Filme;
+import br.com.loca.filmes.repository.FilmeRepository;
 
 /**
  * Created by astr1x on 08/07/17.
@@ -16,6 +22,11 @@ public class FilmeService {
 
     @Autowired
     private FilmeRepository filmeRepository;
+    
+    @PersistenceContext
+	private EntityManager manager;
+    
+    private static final SimpleDateFormat FORMATO_DATA = new SimpleDateFormat("yyyy-MM-dd");
 
     public Filme salvarFilme(Filme filme) {
         filme = filmeRepository.save(filme);
@@ -34,38 +45,37 @@ public class FilmeService {
         return filmeRepository.findOne(id);
     }
     
-    public List<Filme> pesquisarFilmes(Filme parametrosFilme) {
-    	List<Filme> filmesSelecionados = null;
-    	filmesSelecionados = filtraFilmes(filmesSelecionados, parametrosFilme);
-
-    	return filmesSelecionados;
-    }
-    
-    private List<Filme> filtraFilmes(List<Filme> filmesSelecionados, Filme parametrosFilme){
-    	List<Filme> todosFilmes = filmeRepository.findAll();
-    	Filme filme;
+    public List<Filme> pesquisarFilmes(Filme filme) {
+    	StringBuilder query = new StringBuilder();
+		query.append("select * from filme where 1=1");
     	
-    	//percorre todos os filmes
-    	while (todosFilmes.isEmpty()){
-    		int contador = 0;
-    		filme = todosFilmes.get(contador);
-    		
-    		//Verifica se o registro atual tem os parametros da busca
-    		if (((filme.getCensura() == parametrosFilme.getCensura() )||( parametrosFilme.getCensura() == null ))&&((
-    			filme.getDataLancamento() == parametrosFilme.getDataLancamento() )||( parametrosFilme.getDataLancamento() == null ))&&(( 
-    			filme.getDuracao() == parametrosFilme.getDuracao() )||( parametrosFilme.getDuracao() == null ))&&((
-    			filme.getGenero() == parametrosFilme.getGenero() )||( parametrosFilme.getGenero() == null ))&&((
-    			filme.getTitulo() == parametrosFilme.getTitulo() )||( parametrosFilme.getTitulo() == null ))&&((
-    			filme.getId() == parametrosFilme.getId() )||( parametrosFilme.getId() == null ))&&((
-    			filme.getQuantidade() == parametrosFilme.getQuantidade() )||( parametrosFilme.getCensura() == null)))
-    		{
-    			filmesSelecionados.add(filme);
-    		}
-    		
-    		todosFilmes.remove(contador);
-			contador++;
-		}
+    	if (!filme.getTitulo().isEmpty()) {
+    		query.append(" and titulo like '%")
+    		.append(filme.getTitulo())
+    		.append("%'");
+    	}
     	
-    	return filmesSelecionados;
+    	if (filme.getDataLancamento() != null) {
+    		String data = FORMATO_DATA.format(filme.getDataLancamento());
+    		
+    		query.append(" and datalancamento = to_date('")
+    		.append(data)
+    		.append("', 'YYYY-MM-DD')");
+    	}
+    	
+    	if (filme.getCensura() != null) {
+    		query.append(" and censura = ")
+    		.append(filme.getCensura());
+    	}
+    	
+    	if (filme.getQuantidade() != null) {
+    		query.append(" and quantidade = ")
+    		.append(filme.getQuantidade());
+    	}
+    	
+    	Query typeQuery = manager.createNativeQuery(query.toString(), Filme.class);
+    	List<Filme> filmes = typeQuery.getResultList();
+    	
+		return filmes;
     }
 }

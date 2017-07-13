@@ -1,13 +1,14 @@
 package br.com.loca.filmes.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
 import br.com.loca.filmes.model.Filme;
 import br.com.loca.filmes.model.Genero;
 import br.com.loca.filmes.service.FilmeService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/filme")
@@ -18,7 +19,7 @@ public class FilmeController {
 
 	@RequestMapping("/")
     public ModelAndView listarFilme() {
-    	ModelAndView modelAndView = new ModelAndView("filme/listar-filme");
+    	ModelAndView modelAndView = new ModelAndView("filme/listar-filme", "command", new Filme());
     	modelAndView.addObject("titulo", "Filmes");
 		modelAndView.addObject("filmes", filmeService.listarFilmes());
 		return modelAndView;
@@ -26,9 +27,9 @@ public class FilmeController {
 
 	@RequestMapping("/pesquisar")
     public ModelAndView pesquisarFilme(Filme filme) {
-		ModelAndView modelAndView = new ModelAndView("filme/listar-filme");
+		ModelAndView modelAndView = new ModelAndView("filme/listar-filme", "command", filme);
     	modelAndView.addObject("titulo", "Filmes");
-		modelAndView.addObject("filmes", filmeService.pesquisarFilmes(filme));
+    	modelAndView.addObject("filmes", filmeService.pesquisarFilmes(filme));
     	return modelAndView;
     }
 
