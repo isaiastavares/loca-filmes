@@ -22,7 +22,7 @@
                 	
                     <div class="mdl-grid">
                         <div class="mdl-cell mdl-cell--8-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input cssClass="mdl-textfield__input" path="titulo"/>
+                            <form:input cssClass="mdl-textfield__input" path="titulo" required="true"/>
                             <form:label cssClass="mdl-textfield__label" path="titulo">Título</form:label>
                         </div>
                         
@@ -83,23 +83,23 @@
 
                     <div class="mdl-grid">
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input cssClass="mdl-textfield__input time" path="duracao"/>
+                            <form:input cssClass="mdl-textfield__input time" path="duracao" required="true"/>
                             <form:label cssClass="mdl-textfield__label" path="duracao">Duração</form:label>
                         </div>
 
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input cssClass="mdl-textfield__input" path="dataLancamento" onkeypress="mascaraData(this)"/>
+                            <form:input cssClass="mdl-textfield__input" path="dataLancamento" onkeypress="mascaraData(this)" required="true"/>
                             <form:label cssClass="mdl-textfield__label"
                                         path="dataLancamento">Data de Lançamento</form:label>
                         </div>
 
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input cssClass="mdl-textfield__input" path="censura" maxlength="2" onkeyup="somenteNumeros(this)"/>
+                            <form:input cssClass="mdl-textfield__input" path="censura" maxlength="2" onkeyup="somenteNumeros(this)" required="true"/>
                             <form:label cssClass="mdl-textfield__label" path="censura">Censura</form:label>
                         </div>
 
                         <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <form:input cssClass="mdl-textfield__input" path="quantidade" maxlength="2" onkeyup="somenteNumeros(this)"/>
+                            <form:input cssClass="mdl-textfield__input" path="quantidade" maxlength="2" onkeyup="somenteNumeros(this)" required="true"/>
                             <form:label cssClass="mdl-textfield__label" path="quantidade">Quantidade</form:label>
                         </div>
                     </div>
